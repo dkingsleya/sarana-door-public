@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+/* START: General styles */
+.max-width {
+  @apply max-w-[1440px] mx-auto;
+}
+
+.padding-x {
+  @apply sm:px-16 px-6;
+}
+
+.padding-y {
+  @apply py-4;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}
+/* END: General styles */
+
+/* START: Hero styles */
+.hero {
+  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+}
+
+.hero__title {
+  @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
+}
+
+.hero__subtitle {
+  @apply text-[20px] text-black-100 font-light mt-5;
+}
+
+.hero__image-container {
+  @apply xl:flex-[1.5] flex justify-center xl:w-1/2 h-full xl:h-screen xl:pt-36 padding-x pt-10;
+}
+
+.hero__image {
+  @apply inline-block align-middle xl:w-full w-[100%] xl:h-full h-full z-0;
+}
+
+.hero__image-overlay {
+  @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
+}
+/* END: Hero styles */
+
+/* START: Home styles */
+
+.home__text-container {
+  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
+}
+
+.home__filters {
+  @apply mt-12 w-full flex-between items-center flex-wrap gap-5;
+}
+
+.home__filter-container {
+  @apply flex justify-start flex-wrap items-center gap-2;
+}
+
+.home__cars-wrapper {
+  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
+}
+
+.home__error-container {
+  @apply mt-16 flex justify-center items-center flex-col gap-2 m-auto;
+}
+/* END: Home styles */
+
+/* START: Car Card styles */
+.car-card {
+  @apply flex flex-col p-6 w-full h-[600px] max-h-[600px] justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
+}
+
+.car-card__content {
+  @apply w-full flex justify-between items-start gap-4;
+}
+
+.car-card__content-title {
+  @apply text-[22px] leading-[26px] font-bold capitalize;
+}
+/* END: Car Card styles */
+
+/* START: Footer styles */
+.footer {
+  @apply flex flex-col text-black-100  mt-5 border-t border-gray-100;
+}
+
+.footer__links {
+  @apply flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20;
+}
+
+.footer__link {
+  @apply flex flex-col gap-6 text-base min-w-[170px];
+}
+
+/* END: Footer styles */
+
+/* START: searchbar styles */
+.searchbar {
+  @apply flex items-center justify-start max-sm:flex-col w-1/3 max-sm:w-full relative max-sm:gap-4;
+}
+
+.searchbar__item {
+  @apply flex-1 max-sm:w-full w-[80%] flex justify-start items-center relative;
+}
+
+.searchbar__input {
+  @apply w-full h-[48px] pl-12 p-4 bg-light-white rounded-full max-sm:rounded-full outline-none cursor-pointer text-sm;
+}
+/* END: searchbar styles */
+
+/* START: search manufacturer styles */
+.search-manufacturer {
+  @apply flex-1 max-sm:w-full flex justify-start items-center;
+}
+
+.search-manufacturer__input {
+  @apply w-full h-[48px] pl-12 p-4 rounded-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm;
+}
+
+.search-manufacturer__option {
+  @apply cursor-default select-none py-2 pl-10 pr-4;
+}
+/* END: search manufacturer styles */
